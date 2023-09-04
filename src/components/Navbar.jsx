@@ -1,12 +1,17 @@
+import { useContext, useState } from 'react';
+import { CartContext } from '../App';
 import Logo from '../assets/logo.svg';
 import Avatar from '../assets/image-avatar.png';
 import CartIcon  from '../assets/icon-cart.svg';
+import ShoeImage from '../assets/image-product-1-thumbnail.jpg';
+import Bin from '../assets/icon-delete.svg'
 import '../styles/Navbar.scss';
-import { useContext } from 'react';
-import { CartContext } from '../App';
+
 
 export const Navbar = () => {
-    const { amount } = useContext(CartContext);
+    const [cartToggle, setCartToggle] = useState(true);
+    const { amount, removeFromCart } = useContext(CartContext);
+    
 
     return (
         <div className="navbar">
@@ -27,6 +32,27 @@ export const Navbar = () => {
                         <p className='amount'>
                             {amount}
                         </p>
+                    }
+
+                    {cartToggle &&
+                        <div className='basket'>
+                            <div className='basketTitle'>
+                                <h2>Cart</h2>
+                            </div>
+                            {amount > 0 ? 
+                            <>
+                                <div className='item'>
+                                    <img src={ShoeImage} alt="" />
+                                    <div className='item-text'>
+                                        <p>Fall Limited Edition Sneakers</p>
+                                        <p>$125.00 x {amount} <span className='bold-price'>${amount * 125}.00</span></p>
+                                    </div>
+                                    <img onClick={removeFromCart} className='bin' src={Bin} alt="" />
+                                </div>
+                                <button className='checkout-btn'>Checkout</button>
+                            </> : <div className='empty-cart'>Your cart is empty.</div>
+                            }
+                        </div>
                     }
                 </div>
                 <img className='avatar' src={Avatar} alt="Avatar" />

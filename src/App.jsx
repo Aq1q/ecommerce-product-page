@@ -10,7 +10,7 @@ export const CartContext = createContext({
 })
 
 function App() {
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState(1);
 
   const addToCart = () => {
     setAmount(amount + 1);
