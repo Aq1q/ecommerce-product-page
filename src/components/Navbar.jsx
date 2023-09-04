@@ -6,6 +6,7 @@ import { useContext } from 'react';
 import { CartContext } from '../App';
 
 export const Navbar = () => {
+    const { amount } = useContext(CartContext);
 
     return (
         <div className="navbar">
@@ -22,6 +23,11 @@ export const Navbar = () => {
             <div className="nav-right">
                 <div>
                     <img className='cart' src={CartIcon} alt="cart" />
+                    {amount > 0 &&
+                        <p className='amount'>
+                            {amount}
+                        </p>
+                    }
                 </div>
                 <img className='avatar' src={Avatar} alt="Avatar" />
             </div>
