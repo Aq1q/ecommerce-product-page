@@ -1,0 +1,59 @@
+$light-grayish-blue: hsl(223, 64%, 98%);
+$grayish-blue: hsl(220, 14%, 75%);
+$dark-grayish-blue: hsl(219, 9%, 45%);
+$very-dark-blue: hsl(220, 13%, 13%);
+$orange: hsl(26, 100%, 55%);
+
+
+@mixin nav-side {
+    display: flex;
+    align-items: center;
+}
+
+@mixin nav-item {
+    box-sizing: content-box;
+    height: calc(100% - 10px);
+}
+
+.navbar {
+    margin: 0 165px;
+    height: 113px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E8E8EA;
+}
+.nav-left {
+    @include nav-side;
+    gap: 55px;
+}
+.logo {
+    width: 137px;
+    height: 20px;
+}
+.nav-ul {
+    margin: 0;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 20px;
+    color: $dark-grayish-blue;
+}
+.nav-item {
+    @include nav-item;
+    display: flex;
+    align-items: center;
+    gap: 33px;
+    border-top: solid 5px white;
+    border-bottom: solid 5px white;
+}
+.nav-item:hover {
+    @include nav-item;
+    cursor: pointer;
+    color: $very-dark-blue;
+    border-bottom: solid 5px $orange;
+}
+.nav-right {
+    @include nav-side;
+}

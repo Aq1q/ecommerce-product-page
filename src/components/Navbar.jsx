@@ -1,12 +1,13 @@
 import Logo from '../assets/logo.svg'
 import Avatar from '../assets/image-avatar.png'
 import CartIcon  from '../assets/icon-cart.svg'
+import '../styles/Navbar.scss'
 
 export const Navbar = () => {
     return (
         <div className="navbar">
             <div className='nav-left'>
-                <img src={Logo} alt="Logo" />
+                <img className='logo' src={Logo} alt="Logo" />
                 <ul className='nav-ul'>
                     <li className='nav-item'>Collections</li>
                     <li className='nav-item'>Men</li>
@@ -17,9 +18,9 @@ export const Navbar = () => {
             </div>
             <div className="nav-right">
                 <div>
-                    <img src={CartIcon} alt="cart" />
+                    <img className='cart' src={CartIcon} alt="cart" />
                 </div>
-                <img src={Avatar} alt="Avatar" />
+                <img className='avatar' src={Avatar} alt="Avatar" />
             </div>
         </div>
     )
