@@ -9,8 +9,11 @@ import '../styles/Navbar.scss';
 
 
 export const Navbar = () => {
-    const [cartToggle, setCartToggle] = useState(true);
+    const [cartToggle, setCartToggle] = useState(false);
     const { amount, removeFromCart } = useContext(CartContext);
+    const handleClick = () => {
+        setCartToggle(!cartToggle);
+    }
     
 
     return (
@@ -27,13 +30,12 @@ export const Navbar = () => {
             </div>
             <div className="nav-right">
                 <div className='cart-box'>
-                    <img className='cart' src={CartIcon} alt="cart" />
+                    <img onClick={handleClick} className='cart' src={CartIcon} alt="cart" />
                     {amount > 0 &&
-                        <p className='amount'>
+                        <p onClick={handleClick} className='amount'>
                             {amount}
                         </p>
                     }
-
                     {cartToggle &&
                         <div className='basket'>
                             <div className='basketTitle'>
