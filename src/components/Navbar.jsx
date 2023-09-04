@@ -1,9 +1,12 @@
-import Logo from '../assets/logo.svg'
-import Avatar from '../assets/image-avatar.png'
-import CartIcon  from '../assets/icon-cart.svg'
-import '../styles/Navbar.scss'
+import Logo from '../assets/logo.svg';
+import Avatar from '../assets/image-avatar.png';
+import CartIcon  from '../assets/icon-cart.svg';
+import '../styles/Navbar.scss';
+import { useContext } from 'react';
+import { CartContext } from '../App';
 
 export const Navbar = () => {
+
     return (
         <div className="navbar">
             <div className='nav-left'>
