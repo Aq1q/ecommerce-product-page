@@ -56,4 +56,19 @@ $orange: hsl(26, 100%, 55%);
 }
 .nav-right {
     @include nav-side;
+    gap: 45px;
+}
+.cart:hover {
+    cursor:pointer;
+}
+.avatar {
+    width: 46px;
+    height: auto;
+    border: 2px solid white;
+    box-sizing: content-box;
+}
+.avatar:hover {
+    border-radius: 50%;
+    border: 2px solid $orange;
+    cursor: pointer;
 }
