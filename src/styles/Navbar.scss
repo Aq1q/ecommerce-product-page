@@ -58,8 +58,24 @@ $orange: hsl(26, 100%, 55%);
     @include nav-side;
     gap: 45px;
 }
-.cart:hover {
-    cursor:pointer;
+.cart-box {
+    position: relative;
+}
+.cart-box:hover {
+    cursor: pointer;
+}
+.amount {
+    width: 19px;
+    height: 13px;
+    font-size: 13px;
+    text-align: center;
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    border-radius: 20px;
+    margin: 0;
+    color: white;
+    background-color: $orange;
 }
 .avatar {
     width: 46px;

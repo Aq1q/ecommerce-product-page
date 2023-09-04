@@ -21,7 +21,7 @@ export const Navbar = () => {
                 </ul>
             </div>
             <div className="nav-right">
-                <div>
+                <div className='cart-box'>
                     <img className='cart' src={CartIcon} alt="cart" />
                     {amount > 0 &&
                         <p className='amount'>
