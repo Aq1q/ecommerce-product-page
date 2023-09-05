@@ -24,9 +24,16 @@ $light-grayish-blue: hsl(223, 64%, 98%);
     display: flex;
     flex-direction: column;
     gap: 32px;
-    width: 31vw;
+    width: 35%;
     height: auto;
 }
+
+@media screen and (max-width: 1440px) {
+    .photos {
+        width: 31vw;
+    }
+}
+
 .image-box {
     width: 100%;
     height: auto;
