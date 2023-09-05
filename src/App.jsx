@@ -13,12 +13,12 @@ export const CartContext = createContext({
 function App() {
   const [amount, setAmount] = useState(1);
 
-  const addToCart = () => {
-    setAmount(amount + 1);
+  const addToCart = (arg) => {
+    setAmount(amount + arg);
   }
   const removeFromCart = () => {
     if(amount != 0) {
-      setAmount(amount - 1);
+      setAmount(0);
     }
   }
 

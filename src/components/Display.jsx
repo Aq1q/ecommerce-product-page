@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Image1 from '../assets/image-product-1.jpg';
 import Image2 from '../assets/image-product-2.jpg';
 import Image3 from '../assets/image-product-3.jpg';
@@ -11,10 +11,12 @@ import Cart from '../assets/icon-cart-white.svg';
 import Plus from '../assets/icon-plus.svg';
 import Minus from '../assets/icon-minus.svg';
 import '../styles/main.scss';
+import { CartContext } from "../App";
 
 export const Display = () => {
     const [mainImage, setMainImage] = useState(Image1);
     const [amountToAdd, setAmountToAdd] = useState(0);
+    const { addToCart } = useContext(CartContext);
 
     const thumbnailClick = (image) => {
         setMainImage(image)
@@ -25,6 +27,9 @@ export const Display = () => {
     }
     const handleMinus = () => {
         if(amountToAdd != 0) setAmountToAdd(amountToAdd - 1);
+    }
+    const updateCart = () => {
+        addToCart(amountToAdd);
     }
 
     return (
@@ -71,7 +76,7 @@ export const Display = () => {
                             <img className="plus-img" src={Plus} alt="Plus" />
                         </div>
                     </div>
-                    <button className="add-button">
+                    <button onClick={updateCart} className="add-button">
                         <img src={Cart} alt="" />
                         Add to cart
                     </button>
