@@ -10,7 +10,7 @@ import Thumbnail4 from '../assets/image-product-4-thumbnail.jpg';
 import Cart from '../assets/icon-cart.svg';
 import Plus from '../assets/icon-plus.svg';
 import Minus from '../assets/icon-minus.svg';
-
+import '../styles/main.scss';
 
 export const Display = () => {
     const [mainImage, setMainImage] = useState(Image1);
@@ -28,16 +28,24 @@ export const Display = () => {
     }
 
     return (
-        <div style={{marginTop: '90px', marginLeft: '165px', marginRight: '165px', display: 'flex', gap: '125px'}} aria-label="main">
-            <div className="photos" style={{display: 'flex', flexDirection: 'column', gap: '32px'}}>
-                <div className="image-box" style={{height: '445px'}}>
-                    <img className="main-image" style={{width: '445px', borderRadius: '20px'}} src={mainImage} alt="" />
+        <div className="main" aria-label="main">
+            <div className="photos">
+                <div className="image-box">
+                    <img className="main-image" src={mainImage} alt="" />
                 </div>
-                <div className="thumbnail-box" style={{display: 'flex', justifyContent: 'space-between'}}>
-                    <img onClick={() => {thumbnailClick(Image1)}} className="thumbnail" style={{width: "92px", height: "92px", borderRadius: '10px'}} src={Thumbnail1} alt="thumbnail 1" />
-                    <img onClick={() => {thumbnailClick(Image2)}} className="thumbnail" style={{width: "92px", height: "92px", borderRadius: '10px'}} src={Thumbnail2} alt="thumbnail 2" />
-                    <img onClick={() => {thumbnailClick(Image3)}} className="thumbnail" style={{width: "92px", height: "92px", borderRadius: '10px'}} src={Thumbnail3} alt="thumbnail 3" />
-                    <img onClick={() => {thumbnailClick(Image4)}} className="thumbnail" style={{width: "92px", height: "92px", borderRadius: '10px'}} src={Thumbnail4} alt="thumbnail 4" />
+                <div className="thumbnail-box">
+                    <div className="thumbnail">
+                        <img className="thumb-img" onClick={() => {thumbnailClick(Image1)}} src={Thumbnail1} alt="thumbnail 1" />
+                    </div>
+                    <div className="thumbnail">
+                        <img className="thumb-img" onClick={() => {thumbnailClick(Image2)}} src={Thumbnail2} alt="thumbnail 2" />
+                    </div>
+                    <div className="thumbnail">
+                        <img className="thumb-img" onClick={() => {thumbnailClick(Image3)}} src={Thumbnail3} alt="thumbnail 3" />
+                    </div>
+                    <div className="thumbnail">
+                        <img className="thumb-img" onClick={() => {thumbnailClick(Image4)}} src={Thumbnail4} alt="thumbnail 4" />
+                    </div>
                 </div>
             </div>
             <div className="description">

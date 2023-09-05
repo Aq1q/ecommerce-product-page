@@ -1,0 +1,49 @@
+$orange: hsl(26, 100%, 55%);
+
+.main {
+    margin-top: 90px; 
+    margin-left: 165px;
+    margin-right: 165px; 
+    display: flex; 
+    gap: 125px;
+}
+.photos {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.image-box {
+    height: 445px
+}
+.main-image {
+    width: 445px; 
+    border-radius: 20px;
+}
+.thumbnail-box {
+    display: flex; 
+    justify-content: space-between;
+}
+.thumbnail {
+    width: 92px;
+    height: 92px;
+    border-radius: 10px;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+}
+.thumb-img {
+    width: 93.2px;
+    border-radius: 7px;
+}
+
+.thumbnail:hover {
+    cursor: pointer;
+    border: solid 3px $orange;
+    justify-content: center;
+    align-items: center;
+    .thumb-img {
+        opacity: 0.4;
+    }
+}
