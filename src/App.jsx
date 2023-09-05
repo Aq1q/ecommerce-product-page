@@ -1,6 +1,7 @@
 import { createContext } from 'react'
 import { Navbar } from './components/navbar'
 import './App.scss'
+import { Display } from './components/Display'
 import { useState } from 'react'
 
 export const CartContext = createContext({
@@ -24,6 +25,7 @@ function App() {
   return (
     <CartContext.Provider value={{amount, addToCart, removeFromCart}}>
       <Navbar />
+      <Display />
     </CartContext.Provider>
   )
 }
