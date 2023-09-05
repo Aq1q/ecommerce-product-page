@@ -1,22 +1,38 @@
 $orange: hsl(26, 100%, 55%);
+$dark-grayish-blue: hsl(219, 9%, 45%);
+$pale-orange: hsl(25, 100%, 94%);
+$grayish-blue: hsl(220, 14%, 75%);
+$light-grayish-blue: hsl(223, 64%, 98%);
+
+
+@mixin buttons {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+}
 
 .main {
     margin-top: 90px; 
-    margin-left: 165px;
-    margin-right: 165px; 
+    margin-left: 212px;
+    margin-right: 212px; 
     display: flex; 
-    gap: 125px;
+    justify-content: space-between;
 }
 .photos {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    width: 31vw;
+    height: auto;
 }
 .image-box {
-    height: 445px
+    width: 100%;
+    height: auto;
 }
 .main-image {
-    width: 445px; 
+    width: 100%; 
     border-radius: 20px;
 }
 .thumbnail-box {
@@ -24,8 +40,8 @@ $orange: hsl(26, 100%, 55%);
     justify-content: space-between;
 }
 .thumbnail {
-    width: 92px;
-    height: 92px;
+    width: 20%;
+    height: auto;
     border-radius: 10px;
     box-sizing: content-box;
     display: flex;
@@ -34,7 +50,7 @@ $orange: hsl(26, 100%, 55%);
     border: 3px solid white;
 }
 .thumb-img {
-    width: 93.2px;
+    width: 100%;
     border-radius: 7px;
 }
 
@@ -46,4 +62,100 @@ $orange: hsl(26, 100%, 55%);
     .thumb-img {
         opacity: 0.4;
     }
+}
+
+.description {
+    width: 445px;
+}
+
+.company-name {
+    color: $orange;
+}
+
+.product-name {
+    font-size: 3rem;
+}
+
+.description-text {
+    font-size: 18px;
+    color: $dark-grayish-blue;
+    line-height: 1.8rem;
+}
+
+.price-box{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    .old-price {
+        margin: 0;
+        text-decoration: line-through;
+        color: $dark-grayish-blue;
+    }
+}
+.price {
+    font-size: 30px;
+}
+.discount-box {
+    font-weight: bold;
+    display: flex;
+    gap: 17px;
+    align-items: center;
+    h2, p{
+        margin: 0;
+    }
+    .discount {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 27px;
+        text-align: center;
+        color: $orange;
+        background-color: $pale-orange;
+        border-radius: 10px;
+    }
+
+}
+
+.add {
+    display: flex;
+    margin-top: 40px;
+    gap: 17px;
+}
+.select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 155px;
+    height: 55px;
+    background-color: $light-grayish-blue;
+    border-radius: 5px;
+}
+.plus {
+    @include buttons();
+}
+.minus {
+    @include buttons();    
+}
+
+.plus:hover, .minus:hover {
+    cursor: pointer;
+    .minus-img, .plus-img {
+        filter: opacity(0.5);
+    }
+}
+.add-button {
+    width: 272px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    border: none;
+    background-color: $orange;
+    color: white;
+    border-radius: 10px;
+}
+.add-button:hover {
+    filter: opacity(0.5);
+    cursor: pointer;
 }
