@@ -85,9 +85,11 @@ export const Display = () => {
             </div>
             <div className="lightbox">
                 <div className="lightbox-container">
-                    <img className="close" src={Close} alt="" />
+                    <div className="close-container">
+                        <img className="close" src={Close} alt="" />
+                    </div>
                     <div className="main-lightbox-img">
-                        <img src={mainImage} alt="" />
+                        <img className="lightbox-img" src={mainImage} alt="" />
                     </div>
                     <div className="lightbox-thumbnails">
 

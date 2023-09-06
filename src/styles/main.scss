@@ -178,7 +178,18 @@ $light-grayish-blue: hsl(223, 64%, 98%);
     justify-content: center;
     align-items: center;
 }
+
 .lightbox-container {
     position:  relative;
     width: 552px;
+}
+.lightbox-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.close-container {
+    display: flex;
+    justify-content: flex-end;
 }
