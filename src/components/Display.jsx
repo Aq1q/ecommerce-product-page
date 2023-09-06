@@ -10,6 +10,7 @@ import Thumbnail4 from '../assets/image-product-4-thumbnail.jpg';
 import Cart from '../assets/icon-cart-white.svg';
 import Plus from '../assets/icon-plus.svg';
 import Minus from '../assets/icon-minus.svg';
+import Close from '../assets/icon-close.svg';
 import '../styles/main.scss';
 import { CartContext } from "../App";
 
@@ -80,6 +81,19 @@ export const Display = () => {
                         <img src={Cart} alt="" />
                         Add to cart
                     </button>
+                </div>
+            </div>
+            <div className="lightbox">
+                <div className="lightbox-container">
+                    <img className="close" src={Close} alt="" />
+                    <div className="main-lightbox-img">
+                        <img src={mainImage} alt="" />
+                    </div>
+                    <div className="lightbox-thumbnails">
+
+                    </div>
+                    <div className="left"></div>
+                    <div className="right"></div>
                 </div>
             </div>
         </div>

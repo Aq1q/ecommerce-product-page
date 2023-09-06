@@ -166,3 +166,19 @@ $light-grayish-blue: hsl(223, 64%, 98%);
     filter: opacity(0.5);
     cursor: pointer;
 }
+
+.lightbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: hsl(0, 0%, 0%), $alpha: 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lightbox-container {
+    position:  relative;
+    width: 552px;
+}
