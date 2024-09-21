@@ -197,6 +197,9 @@ $light-grayish-blue: hsl(223, 64%, 98%);
     justify-content: flex-end;
     padding-bottom: 20px;
 }
+.close:hover {
+    cursor: pointer;
+}
 
 .lightbox-thumbnails {
     .thumbnail {
@@ -226,4 +229,7 @@ $light-grayish-blue: hsl(223, 64%, 98%);
     align-items: center;
     background-color: white;
     border-radius: 40px;
+}
+.change-btn:hover {
+    cursor: pointer;
 }
