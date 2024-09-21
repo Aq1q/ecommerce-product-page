@@ -3,7 +3,9 @@ $dark-grayish-blue: hsl(219, 9%, 45%);
 $pale-orange: hsl(25, 100%, 94%);
 $grayish-blue: hsl(220, 14%, 75%);
 $light-grayish-blue: hsl(223, 64%, 98%);
-
+#root {
+    $lightbox-display: flex;    
+}
 
 @mixin buttons {
     height: 100%;
@@ -55,6 +57,7 @@ $light-grayish-blue: hsl(223, 64%, 98%);
     justify-content: center;
     align-items: center;
     border: 3px solid white;
+    background-color: white;
 }
 .thumb-img {
     width: 100%;
@@ -174,15 +177,15 @@ $light-grayish-blue: hsl(223, 64%, 98%);
     width: 100vw;
     height: 100vh;
     background-color: rgba($color: hsl(0, 0%, 0%), $alpha: 0.75);
-    display: flex;
+    display: var(--lightbox-display);
     justify-content: center;
     align-items: center;
 }
-
 .lightbox-container {
     position:  relative;
     width: 552px;
 }
+
 .lightbox-img {
     max-width: 100%;
     height: auto;
@@ -192,4 +195,35 @@ $light-grayish-blue: hsl(223, 64%, 98%);
 .close-container {
     display: flex;
     justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+.lightbox-thumbnails {
+    .thumbnail {
+        transform: scale(0.7);
+    }
+    margin-top: 20px;
+    display: flex;
+    flex-direction: horizontal;
+    justify-content: center;
+    gap: 5px;
+}
+
+.switch-buttons-container {
+    width: 100vw;
+    display: flex;
+    position: absolute;
+    top: 40%;
+    gap: 40px;
+    justify-content: space-evenly;
+}
+
+.change-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 40px;
 }
